@@ -1,0 +1,49 @@
+### TwinCAT ###
+# TwinCAT Stack Base
+# gitignore template for TwinCAT3
+# website: https://www.beckhoff.com/twincat3/
+#
+# Recommended: VisualStudio.gitignore
+# TwinCAT 3.1
+
+*.tpy
+
+# NOTE: ignoring the TMC file is only useful for plain PLC programming
+# as soon as shared global data types (via tmc), C++ project or in general a TcCom-Module are used, the TMC file has to be part of the repository
+# Don't include the tmc-file rule if either of the following is true:
+#   1. You've got TwinCAT C++ projects, as the information in the TMC-file is created manually for the C++ projects (in that case, only (manually) ignore the tmc-files for the PLC projects)
+#   2. You've created a standalone PLC-project and added events to it, as these are stored in the TMC-file.
+*.tmc
+
+*.tsproj.bak
+*.plcproj.bak
+*.~
+*.project.~u
+*.tclrs
+*.tmcRefac
+*.xti.bak
+LineIDs.dbg
+LineIDs.dbg.bak
+_Boot/
+_CompileInfo/
+_Libraries/
+
+# For most applications, exluding the ModuleInstall folder is not an issue (it houses TMX files for versioned TcCom objects).
+# If using multiple versions of compiled C++ changable module, then might want to leave this folder under souce control as not to
+# have to check out every older C++ project for C++ module version and compile. 
+_ModuleInstall/ 
+
+# TwinCAT HMI
+# TC HMI also creates it's own Ignore file inside every new project
+.engineering_servers/
+liveview_*
+*.cache
+*.db-shm
+*.db-wal
+*.pid
+tchmipublish.journal.json
+
+# TC HMI 1.12 Additional
+.hmiframework/
+.hmipkgs/*-*-*-*/
+
