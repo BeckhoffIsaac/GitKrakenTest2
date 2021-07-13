@@ -10,4 +10,46 @@
 
 </div>
 
+<div id="TcHmiTachometer" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTachometer" data-tchmi-base-animation-time="1000" data-tchmi-height="300" data-tchmi-height-unit="px" data-tchmi-label-range="20" data-tchmi-left="424" data-tchmi-left-unit="px" data-tchmi-show-labels="True" data-tchmi-show-ticks="True" data-tchmi-show-value-text="True" data-tchmi-top="42" data-tchmi-top-unit="px" data-tchmi-width="300" data-tchmi-width-unit="px">
+<script data-tchmi-target-attribute="data-tchmi-range" type="application/json">
+[
+  {
+    "color": {
+      "color": "rgba(0, 128, 0, 1)"
+    },
+    "start": 0,
+    "end": 35
+  },
+  {
+    "color": {
+      "color": "rgba(255, 165, 0, 1)"
+    },
+    "start": 35,
+    "end": 70
+  },
+  {
+    "color": {
+      "color": "rgba(255, 0, 0, 1)"
+    },
+    "start": 70,
+    "end": 100
+  }
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-value-format" type="application/json">
+{
+  "objectType": "Function",
+  "fn": "GaugeValueFormatter",
+  "fnParams": []
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-tick-definition" type="application/json">
+{
+  "mainTickRange": 20,
+  "subTickRange": 5
+}
+</script>
+
+</div>
+
 </div>
